@@ -3,13 +3,21 @@ package models;
 import java.util.HashMap;
 
 public class Affectation {
-	private HashMap<Student, Slot> affectation;
+	private HashMap<Slot, Student> affectation;
+	private int nbAffectationsToDo;
 
-	public HashMap<Student, Slot> getAffectation() {
+	public HashMap<Slot, Student> getAffectation() {
 		return affectation;
 	}
 
-	public void setAffectation(HashMap<Student, Slot> affectation) {
+	public void setAffectation(HashMap<Slot, Student> affectation) {
 		this.affectation = affectation;
+	}
+	
+	public int getNbAffectationsToDo() {
+		return nbAffectationsToDo;
+	}
+	public void setNbAffectationsToDo(int nbAffectationsToDo) {
+		this.nbAffectationsToDo = nbAffectationsToDo;
 	}
 }
