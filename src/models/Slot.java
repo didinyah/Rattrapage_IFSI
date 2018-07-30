@@ -7,10 +7,18 @@ public class Slot {
 	private Hour hour;
 	private Day day;
 	private Jury jury;
+	private Student student;
+	private boolean full = false;
 	
-	public Slot(Day day, Hour hour) {
+	public Slot(Day day, Hour hour, Jury jury) {
 		this.day = day;
 		this.hour = hour;
+		this.jury = jury;
+	}
+	
+	public void bookSlot(Student student) {
+		this.setStudent(student);
+		this.setFull(true);
 	}
 	
 	public Hour getHour() {
@@ -32,6 +40,22 @@ public class Slot {
 
 	public void setJury(Jury jury) {
 		this.jury = jury;
+	}
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public boolean isFull() {
+		return full;
+	}
+
+	public void setFull(boolean full) {
+		this.full = full;
 	}
 
 }
